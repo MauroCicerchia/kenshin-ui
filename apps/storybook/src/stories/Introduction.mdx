@@ -1,0 +1,109 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Getting Started/Introduction" />
+
+# @kenshin/ui
+
+A personal React UI component library based on **shadcn/ui** patterns with Tailwind CSS.
+
+## Features
+
+- **Tailwind-first styling** - All components use Tailwind CSS classes
+- **Theme system** - CSS variables for easy customization
+- **Accessible** - Built on Radix UI primitives
+- **TypeScript** - Full type support
+- **Tree-shakeable** - Only import what you need
+
+## Installation
+
+```bash
+# Using npm
+npm install @kenshin/ui
+
+# Using bun
+bun add @kenshin/ui
+
+# Using pnpm
+pnpm add @kenshin/ui
+```
+
+## Peer Dependencies
+
+Make sure you have these peer dependencies installed:
+
+```bash
+npm install react react-dom tailwindcss
+```
+
+## Quick Start
+
+### 1. Configure Tailwind
+
+Add the preset to your `tailwind.config.ts`:
+
+```ts
+import type { Config } from "tailwindcss";
+import kenshinPreset from "@kenshin/ui/tailwind-preset";
+
+export default {
+  presets: [kenshinPreset],
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx}",
+    // Include @kenshin/ui components
+    "./node_modules/@kenshin/ui/dist/**/*.js",
+  ],
+} satisfies Config;
+```
+
+### 2. Import Styles
+
+Import the CSS tokens in your main CSS file or entry point:
+
+```css
+/* In your global CSS */
+@import "@kenshin/ui/styles.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+Or in your JavaScript/TypeScript:
+
+```tsx
+// In your main.tsx or App.tsx
+import "@kenshin/ui/styles.css";
+```
+
+### 3. Use Components
+
+```tsx
+import { Button, Card, CardHeader, CardTitle } from "@kenshin/ui";
+
+function App() {
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>Hello World</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <Button>Click me</Button>
+      </CardContent>
+    </Card>
+  );
+}
+```
+
+## Available Components
+
+- **Button** - Versatile button with multiple variants and sizes
+- **Input** - Styled form input
+- **Label** - Accessible label for form elements
+- **Card** - Container with header, content, and footer
+- **Dialog** - Modal dialog with animations
+- **Switch** - Toggle switch for boolean settings
+
+## Next Steps
+
+- Check the [Theming](/docs/getting-started-theming--docs) guide to customize colors and styles
+- Browse individual component documentation for detailed usage

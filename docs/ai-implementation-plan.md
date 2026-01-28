@@ -141,17 +141,9 @@ Deliverable: `bun run storybook` works locally; `bun run build-storybook` output
 ---
 
 
-## Phase 7 — Publish docs for free (choose one)
-Option A (recommended simplest): GitHub Pages
+## Phase 7 — Publish docs
+GitHub Pages
 1. Add workflow that builds storybook and deploys `/storybook-static` to Pages.
-
-
-Option B: Cloudflare Pages
-1. Connect repo, set build command to `bun run build-storybook`, output `apps/storybook/storybook-static`.
-
-
-Option C: Netlify / Vercel
-1. Similar static config.
 
 
 Deliverable: public URL for Storybook docs.
