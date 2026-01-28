@@ -34,3 +34,5 @@ export {
   DialogTitle,
   DialogDescription,
 } from "./components/dialog";
+
+export { Switch } from "./components/switch";
