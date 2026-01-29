@@ -41,7 +41,7 @@
       }
     ],
     [
-      "semantic-release-pnpm",
+      "@semantic-release/npm",
       {
         "pkgRoot": "packages/ui",
         "npmPublish": true
