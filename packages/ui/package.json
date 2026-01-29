@@ -76,10 +76,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/maurocicerchia/kenshin-ui.git",
+    "url": "git+https://github.com/MauroCicerchia/kenshinx-ui.git",
     "directory": "packages/ui"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   }
 }
