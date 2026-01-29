@@ -168,8 +168,7 @@ Deliverable: public URL for Storybook docs.
 - `bun run build`
 - `bunx semantic-release` (or `bun run release`)
 4. Configure npm auth:
-- Prefer npm Trusted Publishing if you want to avoid long-lived tokens :contentReference[oaicite:14]{index=14}
-- Otherwise use `NPM_TOKEN` secret
+- Use `NPM_TOKEN` secret for npm authentication
 
 
 Deliverable: merging to `main` publishes a new npm version + GitHub release notes.
