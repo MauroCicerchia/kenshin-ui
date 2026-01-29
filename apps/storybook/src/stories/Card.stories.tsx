@@ -9,7 +9,7 @@ import {
   Button,
   Input,
   Label,
-} from "@kenshin/ui";
+} from "@kenshinx/ui";
 
 const meta: Meta<typeof Card> = {
   title: "Components/Card",

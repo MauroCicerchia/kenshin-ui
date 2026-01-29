@@ -23,7 +23,7 @@ The workflow is already configured in `.github/workflows/deploy-docs.yml`. It wi
 
 1. Trigger on pushes to `main` branch
 2. Install dependencies with Bun
-3. Build the `@kenshin/ui` package
+3. Build the `@kenshinx/ui` package
 4. Build Storybook static site
 5. Deploy to GitHub Pages
 
@@ -67,7 +67,7 @@ permissions:
 2. **Setup Bun** - Install Bun runtime
 3. **Setup Pages** - Configure GitHub Pages
 4. **Install dependencies** - `bun install`
-5. **Build package** - Build `@kenshin/ui` (required for Storybook)
+5. **Build package** - Build `@kenshinx/ui` (required for Storybook)
 6. **Build Storybook** - Generate static site
 7. **Upload & Deploy** - Push to GitHub Pages
 

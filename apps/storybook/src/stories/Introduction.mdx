@@ -2,7 +2,7 @@ import { Meta } from "@storybook/blocks";
 
 <Meta title="Getting Started/Introduction" />
 
-# @kenshin/ui
+# @kenshinx/ui
 
 A personal React UI component library based on **shadcn/ui** patterns with Tailwind CSS.
 
@@ -18,13 +18,13 @@ A personal React UI component library based on **shadcn/ui** patterns with Tailw
 
 ```bash
 # Using npm
-npm install @kenshin/ui
+npm install @kenshinx/ui
 
 # Using bun
-bun add @kenshin/ui
+bun add @kenshinx/ui
 
 # Using pnpm
-pnpm add @kenshin/ui
+pnpm add @kenshinx/ui
 ```
 
 ## Peer Dependencies
@@ -43,14 +43,14 @@ Add the preset to your `tailwind.config.ts`:
 
 ```ts
 import type { Config } from "tailwindcss";
-import kenshinPreset from "@kenshin/ui/tailwind-preset";
+import kenshinPreset from "@kenshinx/ui/tailwind-preset";
 
 export default {
   presets: [kenshinPreset],
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
-    // Include @kenshin/ui components
-    "./node_modules/@kenshin/ui/dist/**/*.js",
+    // Include @kenshinx/ui components
+    "./node_modules/@kenshinx/ui/dist/**/*.js",
   ],
 } satisfies Config;
 ```
@@ -61,7 +61,7 @@ Import the CSS tokens in your main CSS file or entry point:
 
 ```css
 /* In your global CSS */
-@import "@kenshin/ui/styles.css";
+@import "@kenshinx/ui/styles.css";
 
 @tailwind base;
 @tailwind components;
@@ -72,13 +72,13 @@ Or in your JavaScript/TypeScript:
 
 ```tsx
 // In your main.tsx or App.tsx
-import "@kenshin/ui/styles.css";
+import "@kenshinx/ui/styles.css";
 ```
 
 ### 3. Use Components
 
 ```tsx
-import { Button, Card, CardHeader, CardTitle } from "@kenshin/ui";
+import { Button, Card, CardHeader, CardTitle } from "@kenshinx/ui";
 
 function App() {
   return (

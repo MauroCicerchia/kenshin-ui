@@ -1,4 +1,4 @@
-// @kenshin/ui - Personal React UI Component Library
+// @kenshinx/ui - Personal React UI Component Library
 // Based on shadcn/ui patterns with Tailwind CSS
 
 // Utilities

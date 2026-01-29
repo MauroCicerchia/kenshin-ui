@@ -18,7 +18,7 @@ import {
   DialogFooter,
   DialogClose,
   Switch,
-} from "@kenshin/ui";
+} from "@kenshinx/ui";
 
 function App() {
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -51,7 +51,7 @@ function App() {
         <div className="flex items-start justify-between">
           <div className="space-y-2">
             <h1 className="text-4xl font-bold tracking-tight text-foreground">
-              @kenshin/ui Playground
+              @kenshinx/ui Playground
             </h1>
             <p className="text-muted-foreground">
               Testing all core components from the library.
@@ -74,7 +74,7 @@ function App() {
           <CardHeader>
             <CardTitle>Button Component</CardTitle>
             <CardDescription>
-              All button variants and sizes available in @kenshin/ui.
+              All button variants and sizes available in @kenshinx/ui.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">

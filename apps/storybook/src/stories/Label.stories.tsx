@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Label, Input } from "@kenshin/ui";
+import { Label, Input } from "@kenshinx/ui";
 
 const meta: Meta<typeof Label> = {
   title: "Components/Label",

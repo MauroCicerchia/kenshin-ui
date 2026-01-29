@@ -1,4 +1,4 @@
-# @kenshin/ui — Implementation Plan
+# @kenshinx/ui — Implementation Plan
 
 
 ## Phase 0 — Repo bootstrap (monorepo)
@@ -21,7 +21,7 @@ Deliverable: repo boots, `bun install` works at root.
 
 ## Phase 1 — Package: `packages/ui`
 1. Initialize `packages/ui`:
-- `package.json` name `@kenshin/ui`, version `0.0.0-development`
+- `package.json` name `@kenshinx/ui`, version `0.0.0-development`
 - set `type: "module"`
 - set `sideEffects: false`
 - set `exports` map:
@@ -100,7 +100,7 @@ Steps per component:
 3. Add stories (Phase 6) for each.
 
 
-Deliverable: `@kenshin/ui` can render a small UI in a consumer app.
+Deliverable: `@kenshinx/ui` can render a small UI in a consumer app.
 
 
 ---
@@ -110,8 +110,8 @@ Deliverable: `@kenshin/ui` can render a small UI in a consumer app.
 1. Create `apps/playground` (Vite React TS).
 2. Configure Tailwind in playground:
 - import preset in `tailwind.config`
-- import `@kenshin/ui/styles.css` in `main.tsx`
-3. Link workspace dependency to `@kenshin/ui`.
+- import `@kenshinx/ui/styles.css` in `main.tsx`
+3. Link workspace dependency to `@kenshinx/ui`.
 4. Add a demo page that uses all core components.
 
 
@@ -124,7 +124,7 @@ Deliverable: real “consumer” validation that imports work and theming overri
 1. Create `apps/storybook` with Storybook for React + Vite builder.
 2. Configure it to load:
 - Tailwind preset (or reuse playground Tailwind config)
-- `@kenshin/ui/styles.css`
+- `@kenshinx/ui/styles.css`
 3. Add stories per component:
 - variants
 - sizes
@@ -201,4 +201,4 @@ Deliverable: predictable maintenance and growth without design drift.
 - Visual regression (Chromatic)
 - More complex components (Table, Combobox, Date picker)
 - Theme switching utilities
-- Separate package for `@kenshin/tailwind-preset` if you want independent versioning
+- Separate package for `@kenshinx/tailwind-preset` if you want independent versioning

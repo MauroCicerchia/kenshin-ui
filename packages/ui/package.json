@@ -1,5 +1,5 @@
 {
-  "name": "@kenshin/ui",
+  "name": "@kenshinx/ui",
   "version": "0.0.0-development",
   "description": "Personal React UI component library based on shadcn/ui patterns",
   "type": "module",

@@ -1,9 +1,9 @@
 {
-  "name": "@kenshin/storybook",
+  "name": "@kenshinx/storybook",
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "description": "Storybook documentation for @kenshin/ui",
+  "description": "Storybook documentation for @kenshinx/ui",
   "scripts": {
     "dev": "storybook dev -p 6006",
     "build": "storybook build",
@@ -11,7 +11,7 @@
     "test": "echo 'No tests'"
   },
   "dependencies": {
-    "@kenshin/ui": "workspace:*",
+    "@kenshinx/ui": "workspace:*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

@@ -1,8 +1,8 @@
-# @kenshin/ui — AI Agent Context (Spec)
+# @kenshinx/ui — AI Agent Context (Spec)
 
 
 ## 0) What we’re building
-A personal React UI component library for Mauro’s projects, published to npm as `@kenshin/ui`, based on **shadcn/ui** primitives and patterns, with:
+A personal React UI component library for Mauro’s projects, published to npm as `@kenshinx/ui`, based on **shadcn/ui** primitives and patterns, with:
 - Tailwind-first styling
 - A **theme system** that is:
     - shipped as a **Tailwind preset + CSS variables**
@@ -50,9 +50,9 @@ Recommended structure:
 ├── docs/
 ├── apps/
 │   ├── storybook/ # Storybook site (docs)
-│   └── playground/ # Optional Vite app consuming @kenshin/ui locally
+│   └── playground/ # Optional Vite app consuming @kenshinx/ui locally
 ├── packages/
-│   ├── ui/ # The published npm package (@kenshin/ui)
+│   ├── ui/ # The published npm package (@kenshinx/ui)
 │   └── tailwind-preset/ # Optional: separated preset pkg (or kept inside ui)
 ├── .github/
 │   └── workflows/
@@ -66,9 +66,9 @@ Notes:
 - A `playground` Vite app is extremely useful for smoke-testing consumption patterns.
 
 
-## 5) Package design: `@kenshin/ui`
+## 5) Package design: `@kenshinx/ui`
 ### 5.1 Public API
-- Consumers do: `import { Button, Card, ... } from "@kenshin/ui"`
+- Consumers do: `import { Button, Card, ... } from "@kenshinx/ui"`
 - Entry should be tree-shakeable (ESM).
 - Export only stable components and tokens; avoid exporting internal helpers unless intended.
 
@@ -113,9 +113,9 @@ You want:
 
 ### 6.1 Approach
 - Ship:
-    1) A **Tailwind preset** (`@kenshin/ui/tailwind-preset` or `@kenshin/tailwind-preset`)
+    1) A **Tailwind preset** (`@kenshinx/ui/tailwind-preset` or `@kenshinx/tailwind-preset`)
     2) A **CSS tokens file** (CSS variables) that the consumer imports, e.g.:
-        - `@kenshin/ui/styles.css` (or `tokens.css`)
+        - `@kenshinx/ui/styles.css` (or `tokens.css`)
 - Consumer overrides tokens by:
     - redefining CSS variables in their own CSS (preferred)
     - optionally layering multiple themes via `[data-theme="..."]`
@@ -142,7 +142,7 @@ The preset should:
 
 ```ts
 // tailwind.config.ts
-import kenshinPreset from "@kenshin/ui/tailwind-preset"
+import kenshinPreset from "@kenshinx/ui/tailwind-preset"
 
 
 export default {
@@ -295,7 +295,7 @@ Required for semantic-release to compute versions reliably.
 
 ## 11) Done Definition (v1)
 
-- `@kenshin/ui` published to npm.
+- `@kenshinx/ui` published to npm.
 - A consumer Vite app can install and use it with:
   - Tailwind preset
   - Tokens import

@@ -2,7 +2,7 @@ import type { Config } from "tailwindcss";
 import tailwindcssAnimate from "tailwindcss-animate";
 
 /**
- * @kenshin/ui Tailwind CSS Preset
+ * @kenshinx/ui Tailwind CSS Preset
  *
  * This preset provides:
  * - Color tokens mapped to CSS variables
@@ -11,7 +11,7 @@ import tailwindcssAnimate from "tailwindcss-animate";
  *
  * Usage in consumer's tailwind.config.ts:
  * ```ts
- * import kenshinPreset from "@kenshin/ui/tailwind-preset";
+ * import kenshinPreset from "@kenshinx/ui/tailwind-preset";
  *
  * export default {
  *   presets: [kenshinPreset],
