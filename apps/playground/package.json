@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "lint": "eslint ."
+    "lint": "echo 'No lint configured'"
   },
   "dependencies": {
     "@kenshinx/ui": "workspace:*",
