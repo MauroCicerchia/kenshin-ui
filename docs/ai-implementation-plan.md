@@ -142,33 +142,33 @@ Deliverable: Complete form control set for typical form UIs.
 ---
 
 
-## Phase 4B — Feedback & Notification Components
+## Phase 4B — Feedback & Notification Components ✅ COMPLETED
 Components for user feedback and status communication.
 
-### 4B.1 — Toast (Sonner)
-1. Use shadcn MCP server to fetch Sonner/Toast component source.
-2. Add `sonner` as dependency.
-3. Adapt to library conventions:
-   - Ensure tokens are used for toast styling
-   - Export Toaster and toast utilities from `src/index.ts`
-4. Add story demonstrating: success, error, warning, info, with action, with description.
-5. Add component demo to playground app.
+### 4B.1 — Toast (Sonner) ✅
+1. ~~Use shadcn MCP server to fetch Sonner/Toast component source.~~
+2. ~~Add `sonner` as dependency.~~
+3. ~~Adapt to library conventions:~~
+   - ~~Ensure tokens are used for toast styling~~
+   - ~~Export Toaster and toast utilities from `src/index.ts`~~
+4. ~~Add story demonstrating: success, error, warning, info, with action, with description.~~
+5. ~~Add component demo to playground app.~~
 
-### 4B.2 — Alert
-1. Use shadcn MCP server to fetch Alert component source.
-2. Adapt to library conventions:
-   - Ensure tokens are used
-   - Export from `src/index.ts`
-3. Add story with variants: default, destructive, with icon, with title and description.
-4. Add component demo to playground app.
+### 4B.2 — Alert ✅
+1. ~~Use shadcn MCP server to fetch Alert component source.~~
+2. ~~Adapt to library conventions:~~
+   - ~~Ensure tokens are used~~
+   - ~~Export from `src/index.ts`~~
+3. ~~Add story with variants: default, destructive, with icon, with title and description.~~
+4. ~~Add component demo to playground app.~~
 
-### 4B.3 — Badge
-1. Use shadcn MCP server to fetch Badge component source.
-2. Adapt to library conventions:
-   - Ensure tokens are used
-   - Export from `src/index.ts`
-3. Add story with variants: default, secondary, destructive, outline.
-4. Add component demo to playground app.
+### 4B.3 — Badge ✅
+1. ~~Use shadcn MCP server to fetch Badge component source.~~
+2. ~~Adapt to library conventions:~~
+   - ~~Ensure tokens are used~~
+   - ~~Export from `src/index.ts`~~
+3. ~~Add story with variants: default, secondary, destructive, outline.~~
+4. ~~Add component demo to playground app.~~
 
 
 Deliverable: Comprehensive feedback system for user notifications and status indicators.
