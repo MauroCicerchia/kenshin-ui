@@ -177,53 +177,53 @@ Deliverable: Comprehensive feedback system for user notifications and status ind
 ---
 
 
-## Phase 4C — Navigation & Overlay Components
+## Phase 4C — Navigation & Overlay Components ✅ COMPLETED
 Components for navigation patterns and contextual overlays.
 
-### 4C.1 — Dropdown Menu
-1. Use shadcn MCP server to fetch Dropdown Menu component source.
-2. Add Radix UI Dropdown Menu as dependency if not present.
-3. Adapt to library conventions:
-   - Ensure tokens are used
-   - Export all subcomponents from `src/index.ts`
-4. Add story with: basic menu, with icons, with shortcuts, with submenus, with checkboxes/radios.
-5. Add component demo to playground app.
+### 4C.1 — Dropdown Menu ✅
+1. ~~Use shadcn MCP server to fetch Dropdown Menu component source.~~
+2. ~~Add Radix UI Dropdown Menu as dependency if not present.~~
+3. ~~Adapt to library conventions:~~
+   - ~~Ensure tokens are used~~
+   - ~~Export all subcomponents from `src/index.ts`~~
+4. ~~Add story with: basic menu, with icons, with shortcuts, with submenus, with checkboxes/radios.~~
+5. ~~Add component demo to playground app.~~
 
-### 4C.2 — Tabs
-1. Use shadcn MCP server to fetch Tabs component source.
-2. Add Radix UI Tabs as dependency if not present.
-3. Adapt to library conventions:
-   - Ensure tokens are used
-   - Export from `src/index.ts`
-4. Add story with variants: default, with icons, vertical orientation.
-5. Add component demo to playground app.
+### 4C.2 — Tabs ✅
+1. ~~Use shadcn MCP server to fetch Tabs component source.~~
+2. ~~Add Radix UI Tabs as dependency if not present.~~
+3. ~~Adapt to library conventions:~~
+   - ~~Ensure tokens are used~~
+   - ~~Export from `src/index.ts`~~
+4. ~~Add story with variants: default, with icons, vertical orientation.~~
+5. ~~Add component demo to playground app.~~
 
-### 4C.3 — Tooltip
-1. Use shadcn MCP server to fetch Tooltip component source.
-2. Add Radix UI Tooltip as dependency if not present.
-3. Adapt to library conventions:
-   - Ensure tokens are used
-   - Export from `src/index.ts`
-4. Add story with: basic tooltip, different positions, with delay.
-5. Add component demo to playground app.
+### 4C.3 — Tooltip ✅
+1. ~~Use shadcn MCP server to fetch Tooltip component source.~~
+2. ~~Add Radix UI Tooltip as dependency if not present.~~
+3. ~~Adapt to library conventions:~~
+   - ~~Ensure tokens are used~~
+   - ~~Export from `src/index.ts`~~
+4. ~~Add story with: basic tooltip, different positions, with delay.~~
+5. ~~Add component demo to playground app.~~
 
-### 4C.4 — Popover
-1. Use shadcn MCP server to fetch Popover component source.
-2. Add Radix UI Popover as dependency if not present.
-3. Adapt to library conventions:
-   - Ensure tokens are used
-   - Export from `src/index.ts`
-4. Add story with: basic popover, with form content, different alignments.
-5. Add component demo to playground app.
+### 4C.4 — Popover ✅
+1. ~~Use shadcn MCP server to fetch Popover component source.~~
+2. ~~Add Radix UI Popover as dependency if not present.~~
+3. ~~Adapt to library conventions:~~
+   - ~~Ensure tokens are used~~
+   - ~~Export from `src/index.ts`~~
+4. ~~Add story with: basic popover, with form content, different alignments.~~
+5. ~~Add component demo to playground app.~~
 
-### 4C.5 — Sheet
-1. Use shadcn MCP server to fetch Sheet component source.
-2. Add Radix UI Dialog as dependency if not present (Sheet uses Dialog primitive).
-3. Adapt to library conventions:
-   - Ensure tokens are used
-   - Export from `src/index.ts`
-4. Add story with: left/right/top/bottom positions, with form content.
-5. Add component demo to playground app.
+### 4C.5 — Sheet ✅
+1. ~~Use shadcn MCP server to fetch Sheet component source.~~
+2. ~~Add Radix UI Dialog as dependency if not present (Sheet uses Dialog primitive).~~
+3. ~~Adapt to library conventions:~~
+   - ~~Ensure tokens are used~~
+   - ~~Export from `src/index.ts`~~
+4. ~~Add story with: left/right/top/bottom positions, with form content.~~
+5. ~~Add component demo to playground app.~~
 
 
 Deliverable: Full navigation and overlay toolkit for menus, panels, and contextual content.

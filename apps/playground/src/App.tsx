@@ -33,8 +33,45 @@ import {
   AlertTitle,
   AlertDescription,
   Badge,
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  Tabs,
+  TabsList,
+  TabsTrigger,
+  TabsContent,
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
 } from "@kenshinx/ui";
-import { AlertCircle, Terminal, Info, CheckCircle2 } from "lucide-react";
+import {
+  AlertCircle,
+  Terminal,
+  Info,
+  CheckCircle2,
+  User,
+  CreditCard,
+  Settings,
+  LogOut,
+  Menu,
+  HelpCircle,
+} from "lucide-react";
 
 function App() {
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -510,6 +547,264 @@ function App() {
               <span className="text-sm text-muted-foreground">
                 Notification badge on icon
               </span>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Dropdown Menu Component */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Dropdown Menu Component</CardTitle>
+            <CardDescription>
+              A dropdown menu for displaying actions and options.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="flex flex-wrap gap-4">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline">Open Menu</Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-56">
+                  <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem>
+                    <User className="mr-2 h-4 w-4" />
+                    Profile
+                    <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <CreditCard className="mr-2 h-4 w-4" />
+                    Billing
+                    <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Settings className="mr-2 h-4 w-4" />
+                    Settings
+                    <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem>
+                    <LogOut className="mr-2 h-4 w-4" />
+                    Log out
+                    <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Tabs Component */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Tabs Component</CardTitle>
+            <CardDescription>
+              Organize content into separate tabbed sections.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Tabs defaultValue="account" className="w-full">
+              <TabsList className="grid w-full grid-cols-3">
+                <TabsTrigger value="account">Account</TabsTrigger>
+                <TabsTrigger value="password">Password</TabsTrigger>
+                <TabsTrigger value="settings">Settings</TabsTrigger>
+              </TabsList>
+              <TabsContent value="account" className="mt-4 space-y-2">
+                <h4 className="font-medium">Account Settings</h4>
+                <p className="text-sm text-muted-foreground">
+                  Make changes to your account here.
+                </p>
+              </TabsContent>
+              <TabsContent value="password" className="mt-4 space-y-2">
+                <h4 className="font-medium">Password Settings</h4>
+                <p className="text-sm text-muted-foreground">
+                  Change your password here.
+                </p>
+              </TabsContent>
+              <TabsContent value="settings" className="mt-4 space-y-2">
+                <h4 className="font-medium">General Settings</h4>
+                <p className="text-sm text-muted-foreground">
+                  Configure your general preferences.
+                </p>
+              </TabsContent>
+            </Tabs>
+          </CardContent>
+        </Card>
+
+        {/* Tooltip Component */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Tooltip Component</CardTitle>
+            <CardDescription>
+              Display additional information on hover.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <TooltipProvider>
+              <div className="flex flex-wrap gap-4">
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button variant="outline">Hover me</Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Add to library</p>
+                  </TooltipContent>
+                </Tooltip>
+
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button variant="secondary">
+                      <HelpCircle className="mr-2 h-4 w-4" />
+                      Help
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent side="right">
+                    <p>Need assistance? Click for help.</p>
+                  </TooltipContent>
+                </Tooltip>
+
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button size="icon" variant="ghost">
+                      <Info className="h-4 w-4" />
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent side="bottom">
+                    <p>More information</p>
+                  </TooltipContent>
+                </Tooltip>
+              </div>
+            </TooltipProvider>
+          </CardContent>
+        </Card>
+
+        {/* Popover Component */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Popover Component</CardTitle>
+            <CardDescription>
+              Display rich content in a floating panel.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="flex flex-wrap gap-4">
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button variant="outline">Open Popover</Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-80">
+                  <div className="grid gap-4">
+                    <div className="space-y-2">
+                      <h4 className="font-medium leading-none">Dimensions</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Set the dimensions for the layer.
+                      </p>
+                    </div>
+                    <div className="grid gap-2">
+                      <div className="grid grid-cols-3 items-center gap-4">
+                        <Label htmlFor="popover-width">Width</Label>
+                        <Input
+                          id="popover-width"
+                          defaultValue="100%"
+                          className="col-span-2 h-8"
+                        />
+                      </div>
+                      <div className="grid grid-cols-3 items-center gap-4">
+                        <Label htmlFor="popover-height">Height</Label>
+                        <Input
+                          id="popover-height"
+                          defaultValue="auto"
+                          className="col-span-2 h-8"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </PopoverContent>
+              </Popover>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Sheet Component */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Sheet Component</CardTitle>
+            <CardDescription>
+              Slide-out panels for side navigation and forms.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="flex flex-wrap gap-4">
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button variant="outline">Open Right</Button>
+                </SheetTrigger>
+                <SheetContent>
+                  <SheetHeader>
+                    <SheetTitle>Edit Profile</SheetTitle>
+                    <SheetDescription>
+                      Make changes to your profile here.
+                    </SheetDescription>
+                  </SheetHeader>
+                  <div className="grid gap-4 py-4">
+                    <div className="grid grid-cols-4 items-center gap-4">
+                      <Label htmlFor="sheet-name" className="text-right">
+                        Name
+                      </Label>
+                      <Input
+                        id="sheet-name"
+                        defaultValue="John Doe"
+                        className="col-span-3"
+                      />
+                    </div>
+                    <div className="grid grid-cols-4 items-center gap-4">
+                      <Label htmlFor="sheet-email" className="text-right">
+                        Email
+                      </Label>
+                      <Input
+                        id="sheet-email"
+                        defaultValue="john@example.com"
+                        className="col-span-3"
+                      />
+                    </div>
+                  </div>
+                  <SheetFooter>
+                    <SheetClose asChild>
+                      <Button type="submit">Save changes</Button>
+                    </SheetClose>
+                  </SheetFooter>
+                </SheetContent>
+              </Sheet>
+
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button variant="outline">
+                    <Menu className="mr-2 h-4 w-4" />
+                    Menu (Left)
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="left">
+                  <SheetHeader>
+                    <SheetTitle>Navigation</SheetTitle>
+                    <SheetDescription>Browse through the menu.</SheetDescription>
+                  </SheetHeader>
+                  <nav className="mt-4 flex flex-col space-y-2">
+                    <Button variant="ghost" className="justify-start">
+                      Home
+                    </Button>
+                    <Button variant="ghost" className="justify-start">
+                      Dashboard
+                    </Button>
+                    <Button variant="ghost" className="justify-start">
+                      Projects
+                    </Button>
+                    <Button variant="ghost" className="justify-start">
+                      Settings
+                    </Button>
+                  </nav>
+                </SheetContent>
+              </Sheet>
             </div>
           </CardContent>
         </Card>
