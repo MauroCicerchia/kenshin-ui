@@ -27,7 +27,14 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
+  Toaster,
+  toast,
+  Alert,
+  AlertTitle,
+  AlertDescription,
+  Badge,
 } from "@kenshinx/ui";
+import { AlertCircle, Terminal, Info, CheckCircle2 } from "lucide-react";
 
 function App() {
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -55,6 +62,8 @@ function App() {
 
   return (
     <div className="min-h-screen bg-background p-8 transition-colors">
+      {/* Toaster for toast notifications */}
+      <Toaster />
       <div className="mx-auto max-w-4xl space-y-8">
         {/* Header */}
         <div className="flex items-start justify-between">
@@ -352,6 +361,157 @@ function App() {
             <Button variant="ghost">Learn More</Button>
             <Button>Get Started</Button>
           </CardFooter>
+        </Card>
+
+        {/* Toast Component */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Toast Component</CardTitle>
+            <CardDescription>
+              Beautiful toast notifications built on Sonner.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="flex flex-wrap gap-2">
+              <Button onClick={() => toast("Event has been created")}>
+                Default
+              </Button>
+              <Button onClick={() => toast.success("Success!")}>Success</Button>
+              <Button
+                variant="destructive"
+                onClick={() => toast.error("Something went wrong")}
+              >
+                Error
+              </Button>
+              <Button
+                variant="outline"
+                onClick={() => toast.warning("Please review")}
+              >
+                Warning
+              </Button>
+              <Button
+                variant="secondary"
+                onClick={() => toast.info("New update available")}
+              >
+                Info
+              </Button>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <Button
+                variant="outline"
+                onClick={() =>
+                  toast("Event created", {
+                    description: "Sunday, December 03, 2023 at 9:00 AM",
+                  })
+                }
+              >
+                With Description
+              </Button>
+              <Button
+                variant="outline"
+                onClick={() =>
+                  toast("Event created", {
+                    action: {
+                      label: "Undo",
+                      onClick: () => console.log("Undo"),
+                    },
+                  })
+                }
+              >
+                With Action
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Alert Component */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Alert Component</CardTitle>
+            <CardDescription>
+              Displays a callout for user attention with various styles.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <Alert>
+              <Terminal className="h-4 w-4" />
+              <AlertTitle>Heads up!</AlertTitle>
+              <AlertDescription>
+                You can add components to your app using the cli.
+              </AlertDescription>
+            </Alert>
+            <Alert variant="destructive">
+              <AlertCircle className="h-4 w-4" />
+              <AlertTitle>Error</AlertTitle>
+              <AlertDescription>
+                Your session has expired. Please log in again.
+              </AlertDescription>
+            </Alert>
+            <Alert>
+              <Info className="h-4 w-4" />
+              <AlertTitle>Information</AlertTitle>
+              <AlertDescription>
+                This is an informational message to guide the user.
+              </AlertDescription>
+            </Alert>
+            <Alert className="border-green-500/50 text-green-700 dark:text-green-400 [&>svg]:text-green-600">
+              <CheckCircle2 className="h-4 w-4" />
+              <AlertTitle>Success</AlertTitle>
+              <AlertDescription>
+                Your changes have been saved successfully.
+              </AlertDescription>
+            </Alert>
+          </CardContent>
+        </Card>
+
+        {/* Badge Component */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Badge Component</CardTitle>
+            <CardDescription>
+              Status indicators, notification counts, and labels.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="flex flex-wrap gap-2">
+              <Badge>Default</Badge>
+              <Badge variant="secondary">Secondary</Badge>
+              <Badge variant="destructive">Destructive</Badge>
+              <Badge variant="outline">Outline</Badge>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <Badge className="bg-green-500">
+                Active
+              </Badge>
+              <Badge variant="secondary">Idle</Badge>
+              <Badge variant="destructive">Offline</Badge>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="relative">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-foreground"
+                >
+                  <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+                  <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+                </svg>
+                <Badge className="absolute -right-2 -top-2 h-5 w-5 items-center justify-center p-0 text-[10px]">
+                  3
+                </Badge>
+              </div>
+              <span className="text-sm text-muted-foreground">
+                Notification badge on icon
+              </span>
+            </div>
+          </CardContent>
         </Card>
 
         {/* Theme Override Demo */}

@@ -21,6 +21,9 @@ export default [
         React: "readonly",
         JSX: "readonly",
         // Browser globals
+        window: "readonly",
+        document: "readonly",
+        MutationObserver: "readonly",
         HTMLElement: "readonly",
         HTMLButtonElement: "readonly",
         HTMLInputElement: "readonly",

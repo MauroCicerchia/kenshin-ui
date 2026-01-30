@@ -54,3 +54,15 @@ export {
   SelectScrollUpButton,
   SelectScrollDownButton,
 } from "./components/select";
+
+export { Toaster, toast } from "./components/sonner";
+
+export {
+  Alert,
+  AlertTitle,
+  AlertDescription,
+  alertVariants,
+} from "./components/alert";
+
+export { Badge, badgeVariants } from "./components/badge";
+export type { BadgeProps } from "./components/badge";
