@@ -11,6 +11,7 @@
   "scripts": {
     "build": "bun run --filter '@kenshinx/ui' build && bun run --filter '@kenshinx/playground' --filter '@kenshinx/storybook' build",
     "lint": "bun run --filter '*' lint",
+    "lint:fix": "bun run --filter '*' lint:fix",
     "test": "bun run --filter '*' test",
     "dev": "bun run --filter '*' dev",
     "dev:playground": "bun run --filter '@kenshinx/playground' dev",

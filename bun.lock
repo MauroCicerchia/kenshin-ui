@@ -20,10 +20,13 @@
       "name": "@kenshinx/playground",
       "version": "0.0.0",
       "dependencies": {
+        "@hookform/resolvers": "^3.9.0",
         "@kenshinx/ui": "workspace:*",
         "lucide-react": "^0.563.0",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
+        "react-hook-form": "^7.54.0",
+        "zod": "^3.24.0",
       },
       "devDependencies": {
         "@types/react": "^18.3.0",
@@ -40,10 +43,13 @@
       "name": "@kenshinx/storybook",
       "version": "0.0.0",
       "dependencies": {
+        "@hookform/resolvers": "^3.9.0",
         "@kenshinx/ui": "workspace:*",
         "lucide-react": "^0.563.0",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
+        "react-hook-form": "^7.54.0",
+        "zod": "^3.24.0",
       },
       "devDependencies": {
         "@storybook/addon-essentials": "^8.4.0",
@@ -89,6 +95,7 @@
       },
       "devDependencies": {
         "@eslint/js": "^9.0.0",
+        "@hookform/resolvers": "^3.9.0",
         "@types/react": "^18.3.0",
         "@types/react-dom": "^18.3.0",
         "@typescript-eslint/eslint-plugin": "^8.0.0",
@@ -100,15 +107,25 @@
         "prettier-plugin-tailwindcss": "^0.6.0",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
+        "react-hook-form": "^7.54.0",
         "tailwindcss": "^3.4.17",
         "tsup": "^8.3.0",
         "typescript": "^5.7.0",
+        "zod": "^3.24.0",
       },
       "peerDependencies": {
+        "@hookform/resolvers": "^3.0.0",
         "react": "^18.0.0 || ^19.0.0",
         "react-dom": "^18.0.0 || ^19.0.0",
+        "react-hook-form": "^7.0.0",
         "tailwindcss": "^3.4.0",
+        "zod": "^3.0.0",
       },
+      "optionalPeers": [
+        "@hookform/resolvers",
+        "react-hook-form",
+        "zod",
+      ],
     },
   },
   "packages": {
@@ -299,6 +316,8 @@
     "@floating-ui/utils": ["@floating-ui/utils@0.2.10", "", {}, "sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ=="],
 
     "@hono/node-server": ["@hono/node-server@1.19.9", "", { "peerDependencies": { "hono": "^4" } }, "sha512-vHL6w3ecZsky+8P5MD+eFfaGTyCeOHUIFYMGpQGbrBTSmNNoxv0if69rEZ5giu36weC5saFuznL411gRX7bJDw=="],
+
+    "@hookform/resolvers": ["@hookform/resolvers@3.10.0", "", { "peerDependencies": { "react-hook-form": "^7.0.0" } }, "sha512-79Dv+3mDF7i+2ajj7SkypSKHhl1cbln1OGavqrsF7p6mbUv11xpqpacPsGDCTRvCSjEEIez2ef1NveSVL3b0Ag=="],
 
     "@humanfs/core": ["@humanfs/core@0.19.1", "", {}, "sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA=="],
 
@@ -1513,6 +1532,8 @@
     "react-docgen-typescript": ["react-docgen-typescript@2.4.0", "", { "peerDependencies": { "typescript": ">= 4.3.x" } }, "sha512-ZtAp5XTO5HRzQctjPU0ybY0RRCQO19X/8fxn3w7y2VVTUbGHDKULPTL4ky3vB05euSgG5NpALhEhDPvQ56wvXg=="],
 
     "react-dom": ["react-dom@18.3.1", "", { "dependencies": { "loose-envify": "^1.1.0", "scheduler": "^0.23.2" }, "peerDependencies": { "react": "^18.3.1" } }, "sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw=="],
+
+    "react-hook-form": ["react-hook-form@7.71.1", "", { "peerDependencies": { "react": "^16.8.0 || ^17 || ^18 || ^19" } }, "sha512-9SUJKCGKo8HUSsCO+y0CtqkqI5nNuaDqTxyqPsZPqIwudpj4rCrAz/jZV+jn57bx5gtZKOh3neQu94DXMc+w5w=="],
 
     "react-is": ["react-is@17.0.2", "", {}, "sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w=="],
 

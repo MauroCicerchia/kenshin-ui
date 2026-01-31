@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
 import {
   Button,
   Input,
@@ -71,6 +74,13 @@ import {
   TableRow,
   TableCell,
   TableCaption,
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
 } from "@kenshinx/ui";
 import {
   AlertCircle,
@@ -84,6 +94,141 @@ import {
   Menu,
   HelpCircle,
 } from "lucide-react";
+
+// Form schema for the demo
+const formSchema = z.object({
+  username: z.string().min(2, {
+    message: "Username must be at least 2 characters.",
+  }),
+  email: z.string().email({
+    message: "Please enter a valid email address.",
+  }),
+  bio: z.string().max(160).optional(),
+  notifications: z.boolean().default(false),
+});
+
+type FormValues = z.infer<typeof formSchema>;
+
+function FormDemo() {
+  const form = useForm<FormValues>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      username: "",
+      email: "",
+      bio: "",
+      notifications: false,
+    },
+  });
+
+  function onSubmit(data: FormValues) {
+    toast.success("Form submitted!", {
+      description: (
+        <pre className="mt-2 w-[280px] rounded-md bg-muted p-2 text-xs">
+          {JSON.stringify(data, null, 2)}
+        </pre>
+      ),
+    });
+  }
+
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>Form Component</CardTitle>
+        <CardDescription>
+          React Hook Form integration with Zod validation.
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+            <FormField
+              control={form.control}
+              name="username"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Username</FormLabel>
+                  <FormControl>
+                    <Input placeholder="johndoe" {...field} />
+                  </FormControl>
+                  <FormDescription>
+                    This is your public display name.
+                  </FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Email</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="john@example.com"
+                      type="email"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="bio"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Bio</FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder="Tell us about yourself"
+                      className="resize-none"
+                      {...field}
+                      value={field.value ?? ""}
+                    />
+                  </FormControl>
+                  <FormDescription>Max 160 characters.</FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="notifications"
+              render={({ field }) => (
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                  <FormControl>
+                    <Checkbox
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel>Email notifications</FormLabel>
+                    <FormDescription>
+                      Receive emails about updates.
+                    </FormDescription>
+                  </div>
+                </FormItem>
+              )}
+            />
+            <div className="flex gap-2">
+              <Button type="submit">Submit</Button>
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => form.reset()}
+              >
+                Reset
+              </Button>
+            </div>
+          </form>
+        </Form>
+      </CardContent>
+    </Card>
+  );
+}
 
 function App() {
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -968,6 +1113,9 @@ function App() {
             </Table>
           </CardContent>
         </Card>
+
+        {/* Form Component */}
+        <FormDemo />
 
         {/* Theme Override Demo */}
         <Card className="border-dashed">
