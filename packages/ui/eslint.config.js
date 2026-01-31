@@ -32,6 +32,13 @@ export default [
         HTMLHeadingElement: "readonly",
         HTMLLabelElement: "readonly",
         HTMLTextAreaElement: "readonly",
+        HTMLTableElement: "readonly",
+        HTMLTableSectionElement: "readonly",
+        HTMLTableRowElement: "readonly",
+        HTMLTableCellElement: "readonly",
+        HTMLTableCaptionElement: "readonly",
+        HTMLSpanElement: "readonly",
+        HTMLImageElement: "readonly",
       },
     },
     plugins: {

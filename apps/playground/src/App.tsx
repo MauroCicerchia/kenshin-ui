@@ -59,6 +59,18 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
+  Avatar,
+  AvatarImage,
+  AvatarFallback,
+  Skeleton,
+  Table,
+  TableHeader,
+  TableBody,
+  TableFooter,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableCaption,
 } from "@kenshinx/ui";
 import {
   AlertCircle,
@@ -806,6 +818,154 @@ function App() {
                 </SheetContent>
               </Sheet>
             </div>
+          </CardContent>
+        </Card>
+
+        {/* Avatar Component */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Avatar Component</CardTitle>
+            <CardDescription>
+              Profile images with fallback initials for representing users.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="flex items-center gap-4">
+              <Avatar>
+                <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
+              <Avatar>
+                <AvatarFallback>JD</AvatarFallback>
+              </Avatar>
+              <Avatar>
+                <AvatarFallback className="bg-primary text-primary-foreground">
+                  AB
+                </AvatarFallback>
+              </Avatar>
+            </div>
+            <div className="flex items-center gap-4">
+              <p className="text-sm text-muted-foreground">Different sizes:</p>
+              <Avatar className="h-8 w-8">
+                <AvatarFallback className="text-xs">SM</AvatarFallback>
+              </Avatar>
+              <Avatar>
+                <AvatarFallback>MD</AvatarFallback>
+              </Avatar>
+              <Avatar className="h-14 w-14">
+                <AvatarFallback className="text-lg">LG</AvatarFallback>
+              </Avatar>
+            </div>
+            <div className="flex -space-x-4">
+              <Avatar className="border-2 border-background">
+                <AvatarImage src="https://github.com/shadcn.png" alt="User" />
+                <AvatarFallback>U1</AvatarFallback>
+              </Avatar>
+              <Avatar className="border-2 border-background">
+                <AvatarFallback>U2</AvatarFallback>
+              </Avatar>
+              <Avatar className="border-2 border-background">
+                <AvatarFallback>U3</AvatarFallback>
+              </Avatar>
+              <Avatar className="border-2 border-background">
+                <AvatarFallback className="text-xs">+5</AvatarFallback>
+              </Avatar>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Skeleton Component */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Skeleton Component</CardTitle>
+            <CardDescription>
+              Loading placeholders to improve perceived performance.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div>
+              <p className="mb-2 text-sm text-muted-foreground">Text skeleton:</p>
+              <div className="space-y-2">
+                <Skeleton className="h-4 w-full" />
+                <Skeleton className="h-4 w-[80%]" />
+                <Skeleton className="h-4 w-[60%]" />
+              </div>
+            </div>
+            <div>
+              <p className="mb-2 text-sm text-muted-foreground">Avatar skeleton:</p>
+              <div className="flex items-center space-x-4">
+                <Skeleton className="h-12 w-12 rounded-full" />
+                <div className="space-y-2">
+                  <Skeleton className="h-4 w-[150px]" />
+                  <Skeleton className="h-4 w-[100px]" />
+                </div>
+              </div>
+            </div>
+            <div>
+              <p className="mb-2 text-sm text-muted-foreground">Card skeleton:</p>
+              <div className="flex flex-col space-y-3">
+                <Skeleton className="h-[125px] w-[250px] rounded-xl" />
+                <div className="space-y-2">
+                  <Skeleton className="h-4 w-[250px]" />
+                  <Skeleton className="h-4 w-[200px]" />
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Table Component */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Table Component</CardTitle>
+            <CardDescription>
+              Responsive table for displaying tabular data.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Table>
+              <TableCaption>A list of recent invoices.</TableCaption>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="w-[100px]">Invoice</TableHead>
+                  <TableHead>Status</TableHead>
+                  <TableHead>Method</TableHead>
+                  <TableHead className="text-right">Amount</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                <TableRow>
+                  <TableCell className="font-medium">INV001</TableCell>
+                  <TableCell>
+                    <Badge>Paid</Badge>
+                  </TableCell>
+                  <TableCell>Credit Card</TableCell>
+                  <TableCell className="text-right">$250.00</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium">INV002</TableCell>
+                  <TableCell>
+                    <Badge variant="secondary">Pending</Badge>
+                  </TableCell>
+                  <TableCell>PayPal</TableCell>
+                  <TableCell className="text-right">$150.00</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium">INV003</TableCell>
+                  <TableCell>
+                    <Badge variant="destructive">Unpaid</Badge>
+                  </TableCell>
+                  <TableCell>Bank Transfer</TableCell>
+                  <TableCell className="text-right">$350.00</TableCell>
+                </TableRow>
+              </TableBody>
+              <TableFooter>
+                <TableRow>
+                  <TableCell colSpan={3}>Total</TableCell>
+                  <TableCell className="text-right">$750.00</TableCell>
+                </TableRow>
+              </TableFooter>
+            </Table>
           </CardContent>
         </Card>
 

@@ -232,33 +232,33 @@ Deliverable: Full navigation and overlay toolkit for menus, panels, and contextu
 ---
 
 
-## Phase 4D — Data Display & Loading Components
+## Phase 4D — Data Display & Loading Components ✅ COMPLETED
 Components for displaying data and loading states.
 
-### 4D.1 — Avatar
-1. Use shadcn MCP server to fetch Avatar component source.
-2. Add Radix UI Avatar as dependency if not present.
-3. Adapt to library conventions:
-   - Ensure tokens are used
-   - Export from `src/index.ts`
-4. Add story with: with image, with fallback initials, different sizes.
-5. Add component demo to playground app.
+### 4D.1 — Avatar ✅
+1. ~~Use shadcn MCP server to fetch Avatar component source.~~
+2. ~~Add Radix UI Avatar as dependency if not present.~~
+3. ~~Adapt to library conventions:~~
+   - ~~Ensure tokens are used~~
+   - ~~Export from `src/index.ts`~~
+4. ~~Add story with: with image, with fallback initials, different sizes.~~
+5. ~~Add component demo to playground app.~~
 
-### 4D.2 — Skeleton
-1. Use shadcn MCP server to fetch Skeleton component source.
-2. Adapt to library conventions:
-   - Ensure tokens are used
-   - Export from `src/index.ts`
-3. Add story with: basic skeleton, card skeleton, list skeleton patterns.
-4. Add component demo to playground app.
+### 4D.2 — Skeleton ✅
+1. ~~Use shadcn MCP server to fetch Skeleton component source.~~
+2. ~~Adapt to library conventions:~~
+   - ~~Ensure tokens are used~~
+   - ~~Export from `src/index.ts`~~
+3. ~~Add story with: basic skeleton, card skeleton, list skeleton patterns.~~
+4. ~~Add component demo to playground app.~~
 
-### 4D.3 — Table
-1. Use shadcn MCP server to fetch Table component source.
-2. Adapt to library conventions:
-   - Ensure tokens are used
-   - Export all subcomponents from `src/index.ts`
-3. Add story with: basic table, with sorting indication, with selection, responsive patterns.
-4. Add component demo to playground app.
+### 4D.3 — Table ✅
+1. ~~Use shadcn MCP server to fetch Table component source.~~
+2. ~~Adapt to library conventions:~~
+   - ~~Ensure tokens are used~~
+   - ~~Export all subcomponents from `src/index.ts`~~
+3. ~~Add story with: basic table, with sorting indication, with selection, responsive patterns.~~
+4. ~~Add component demo to playground app.~~
 
 
 Deliverable: Essential components for data-heavy interfaces and loading states.

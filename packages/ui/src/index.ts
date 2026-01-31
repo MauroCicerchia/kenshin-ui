@@ -108,3 +108,18 @@ export {
   SheetTitle,
   SheetDescription,
 } from "./components/sheet";
+
+export { Avatar, AvatarImage, AvatarFallback } from "./components/avatar";
+
+export { Skeleton } from "./components/skeleton";
+
+export {
+  Table,
+  TableHeader,
+  TableBody,
+  TableFooter,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableCaption,
+} from "./components/table";
