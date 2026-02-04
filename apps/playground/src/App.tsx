@@ -81,6 +81,27 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
+  Collapsible,
+  CollapsibleTrigger,
+  CollapsibleContent,
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+  BreadcrumbEllipsis,
+  Calendar,
+  Command,
+  CommandDialog,
+  CommandInput,
+  CommandList,
+  CommandEmpty,
+  CommandGroup,
+  CommandItem,
+  CommandShortcut,
+  CommandSeparator,
+  Combobox,
 } from "@kenshinx/ui";
 import {
   AlertCircle,
@@ -93,6 +114,11 @@ import {
   LogOut,
   Menu,
   HelpCircle,
+  ChevronsUpDown,
+  Slash,
+  Calculator,
+  Smile,
+  Calendar as CalendarIcon,
 } from "lucide-react";
 
 // Form schema for the demo
@@ -1132,6 +1158,163 @@ function App() {
   --radius: 0.75rem;
 }`}</code>
             </pre>
+          </CardContent>
+        </Card>
+        {/* Collapsible Component */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Collapsible Component</CardTitle>
+            <CardDescription>
+              Interactive component which expands/collapses a panel.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Collapsible className="w-[350px] space-y-2">
+              <div className="flex items-center justify-between space-x-4 px-4">
+                <h4 className="text-sm font-semibold">
+                  @peduarte starred 3 repositories
+                </h4>
+                <CollapsibleTrigger asChild>
+                  <Button variant="ghost" size="sm" className="w-9 p-0">
+                    <ChevronsUpDown className="h-4 w-4" />
+                    <span className="sr-only">Toggle</span>
+                  </Button>
+                </CollapsibleTrigger>
+              </div>
+              <div className="rounded-md border px-4 py-3 font-mono text-sm">
+                @radix-ui/primitives
+              </div>
+              <CollapsibleContent className="space-y-2">
+                <div className="rounded-md border px-4 py-3 font-mono text-sm">
+                  @radix-ui/colors
+                </div>
+                <div className="rounded-md border px-4 py-3 font-mono text-sm">
+                  @stitches/react
+                </div>
+              </CollapsibleContent>
+            </Collapsible>
+          </CardContent>
+        </Card>
+
+        {/* Breadcrumb Component */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Breadcrumb Component</CardTitle>
+            <CardDescription>
+              Displays the path to the current resource using a hierarchy of links.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Breadcrumb>
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/">Home</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator>
+                  <Slash />
+                </BreadcrumbSeparator>
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/components">Components</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator>
+                  <Slash />
+                </BreadcrumbSeparator>
+                <BreadcrumbItem>
+                  <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+          </CardContent>
+        </Card>
+
+        {/* Calendar Component */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Calendar Component</CardTitle>
+            <CardDescription>
+              A date picker component built with react-day-picker.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="flex justify-center">
+            <Calendar
+              mode="single"
+              className="rounded-md border shadow"
+            />
+          </CardContent>
+        </Card>
+
+        {/* Command Component */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Command Component</CardTitle>
+            <CardDescription>
+              Fast, composable, unstyled command menu for React.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="flex justify-center">
+            <Command className="rounded-lg border shadow-md w-[450px]">
+              <CommandInput placeholder="Type a command or search..." />
+              <CommandList>
+                <CommandEmpty>No results found.</CommandEmpty>
+                <CommandGroup heading="Suggestions">
+                  <CommandItem>
+                    <CalendarIcon className="mr-2 h-4 w-4" />
+                    <span>Calendar</span>
+                  </CommandItem>
+                  <CommandItem>
+                    <Smile className="mr-2 h-4 w-4" />
+                    <span>Search Emoji</span>
+                  </CommandItem>
+                  <CommandItem>
+                    <Calculator className="mr-2 h-4 w-4" />
+                    <span>Calculator</span>
+                  </CommandItem>
+                </CommandGroup>
+                <CommandSeparator />
+                <CommandGroup heading="Settings">
+                  <CommandItem>
+                    <User className="mr-2 h-4 w-4" />
+                    <span>Profile</span>
+                    <CommandShortcut>⌘P</CommandShortcut>
+                  </CommandItem>
+                  <CommandItem>
+                    <CreditCard className="mr-2 h-4 w-4" />
+                    <span>Billing</span>
+                    <CommandShortcut>⌘B</CommandShortcut>
+                  </CommandItem>
+                  <CommandItem>
+                    <Settings className="mr-2 h-4 w-4" />
+                    <span>Settings</span>
+                    <CommandShortcut>⌘S</CommandShortcut>
+                  </CommandItem>
+                </CommandGroup>
+              </CommandList>
+            </Command>
+          </CardContent>
+        </Card>
+        {/* Combobox Component */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Combobox Component</CardTitle>
+            <CardDescription>
+              Autocomplete input and command palette with a list of suggestions.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="flex justify-center flex-col gap-4">
+            <div className="w-[200px]">
+              <Label className="mb-2 block">Framework</Label>
+              <Combobox
+                options={[
+                  { value: "next.js", label: "Next.js" },
+                  { value: "sveltekit", label: "SvelteKit" },
+                  { value: "nuxt.js", label: "Nuxt.js" },
+                  { value: "remix", label: "Remix" },
+                  { value: "astro", label: "Astro" },
+                ]}
+                placeholder="Select framework..."
+                onValueChange={(val: string) => console.log(val)}
+              />
+            </div>
           </CardContent>
         </Card>
       </div>

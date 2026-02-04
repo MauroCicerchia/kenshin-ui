@@ -39,6 +39,9 @@ export default [
         HTMLTableCaptionElement: "readonly",
         HTMLSpanElement: "readonly",
         HTMLImageElement: "readonly",
+        HTMLOListElement: "readonly",
+        HTMLLIElement: "readonly",
+        HTMLAnchorElement: "readonly",
       },
     },
     plugins: {
